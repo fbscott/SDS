@@ -48,3 +48,8 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// SDS Imports
+@import './fonts/font-family';
+@import './base/base';
+@import './modules/fonts';

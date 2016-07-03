@@ -1,0 +1,22 @@
+// GreatVibes
+.great-vibes {
+  // font-family: 'bebas-neue-thin', $font-stack-fallbacks;
+  font-family: 'GreatVibes', $header-font-family;
+  font-weight: 100;
+  font-style: normal;   
+}
+// Font size function
+// @for $i from $font-size-start through $font-size-end {
+//   .font-size-#{$i} {
+//     font-size: remCalc($i) !important;
+//   }
+// }
+
+// @media only screen and (min-width: $large-breakpoint) {
+//    @for $i from $font-size-start through $font-size-end {
+//      .font-size-#{$i}-on-large {
+//        font-size: remCalc($i);
+//      }
+//    }
+// }
+// 
