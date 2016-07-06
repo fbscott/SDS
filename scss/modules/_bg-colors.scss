@@ -1,0 +1,6 @@
+// Partial-specific vars
+$bg-color-charcoal: map-get($foundation-palette, primary);
+
+.bg-color-charcoal {
+	background-color: $bg-color-charcoal;
+}

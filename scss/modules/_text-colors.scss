@@ -1,0 +1,6 @@
+// Partial-specific vars
+$text-color-casper: map-get($foundation-palette, secondary);
+
+.text-color-casper {
+	color: $text-color-casper;
+}
