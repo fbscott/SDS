@@ -1,0 +1,115 @@
+// module-specific vars
+$nav-border-color: #404040;
+
+// This ruleset won't be rendered on its own.
+nav {
+	&%home {
+		ul {
+			li {
+				background-color: #2d2d2d;
+				max-height: 0;
+			  -webkit-transition: max-height 300ms;
+			  	 -moz-transition: max-height 300ms;
+			  		-ms-transition: max-height 300ms;
+			  		 -o-transition: max-height 300ms;
+			  				transition: max-height 300ms;
+				a {
+					width: 100%;
+					display: block;
+					color: #ffffff;
+					padding: rem-calc(10);
+				}
+				@include breakpoint(medium) {
+					background-color: initial;
+					height: initial;
+					border-bottom: none;
+					// media-specific
+					list-style: none;
+					display: inline-block;
+		      // one item
+		      &:first-child:nth-last-child(1),
+		      // two items
+		      &:first-child:nth-last-child(2),
+		      &:first-child:nth-last-child(2) ~ li {
+						width: 50%;
+		      }
+		      // three items
+		      &:first-child:nth-last-child(3),
+		      &:first-child:nth-last-child(3) ~ li {
+						width: 33.333333%;
+		      }
+		      // four items
+		      &:first-child:nth-last-child(4),
+		      &:first-child:nth-last-child(4) ~ li {
+						width: 50%;
+						@include breakpoint(medium) {
+							width: 25%;
+						}
+		      }
+		      // five items
+		      &:first-child:nth-last-child(5),
+		      &:first-child:nth-last-child(5) ~ li {
+						width: 50%;
+						@include breakpoint(medium) {
+							width: 20%;
+						}
+		      }
+					a {
+						font-family: $header-font-family-overrides;
+						width: initial;
+						display: initial;
+						color: initial;
+						padding: initial;
+						// media-specific
+						position: relative;
+						display: block;
+						text-decoration: none;
+						width: 0;
+						height: 0;
+						@include breakpoint(750) {
+							padding: rem-calc(70);
+						}
+						padding: rem-calc(50);
+						white-space: nowrap;
+						background-color: white;
+						border-radius: 50%;
+						left: 50%;
+						transform: translateX(-50%);
+						span {
+							position: absolute;
+							transform: translate(-50%, -50%);
+						}
+					}
+				}
+			}
+			// add class to ul in order to display li(s)
+			&.show-list-items {
+				li {
+					height: initial;
+					max-height: rem-calc(47);
+					border-bottom: 1px solid $nav-border-color;
+				  -webkit-transition: max-height 300ms;
+				  	 -moz-transition: max-height 300ms;
+				  		-ms-transition: max-height 300ms;
+				  		 -o-transition: max-height 300ms;
+				  				transition: max-height 300ms;
+					&:first-of-type {
+						border-top: 1px solid $nav-border-color;
+					}
+				}
+			}
+		}
+	}
+	&%sub {
+	  color: white;
+	  font-size: 1.5em;
+	}
+}
+
+#nav-home-page {
+  @extend %home;
+}
+
+#nav-sub-page {
+  @extend %sub;
+}
