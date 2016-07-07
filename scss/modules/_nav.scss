@@ -1,27 +1,53 @@
 // module-specific vars
 $nav-border-color: #404040;
+$nav-box-shadow-color: #2d2d2d;
 
 // This ruleset won't be rendered on its own.
 nav {
 	&%home {
 		ul {
+			display: none;
 			li {
 				background-color: #2d2d2d;
-				max-height: 0;
-			  -webkit-transition: max-height 300ms;
-			  	 -moz-transition: max-height 300ms;
-			  		-ms-transition: max-height 300ms;
-			  		 -o-transition: max-height 300ms;
-			  				transition: max-height 300ms;
+				border-bottom: 1px solid $nav-border-color;
+				-webkit-transition: background-color 300ms;
+					 -moz-transition: background-color 300ms;
+						-ms-transition: background-color 300ms;
+						 -o-transition: background-color 300ms;
+								transition: background-color 300ms;
+				&:hover {
+					background-color: #cccccc;
+					// box-shadow: inset 0 rem-calc(10) rem-calc(5) rem-calc(-10) $nav-box-shadow-color, inset 0 rem-calc(-10) rem-calc(5) rem-calc(-10) $nav-box-shadow-color;
+					-webkit-transition: background-color 300ms;
+						 -moz-transition: background-color 300ms;
+							-ms-transition: background-color 300ms;
+							 -o-transition: background-color 300ms;
+									transition: background-color 300ms;
+					a {
+						color: #2d2d2d;
+						-webkit-transition: color 300ms;
+							 -moz-transition: color 300ms;
+								-ms-transition: color 300ms;
+								 -o-transition: color 300ms;
+										transition: color 300ms;
+					}
+				}
+				&:first-of-type {
+					border-top: 1px solid $nav-border-color;
+				}
 				a {
 					width: 100%;
 					display: block;
 					color: #ffffff;
 					padding: rem-calc(10);
+					-webkit-transition: color 300ms;
+						 -moz-transition: color 300ms;
+							-ms-transition: color 300ms;
+							 -o-transition: color 300ms;
+									transition: color 300ms;
 				}
 				@include breakpoint(medium) {
 					background-color: initial;
-					height: initial;
 					border-bottom: none;
 					// media-specific
 					list-style: none;
@@ -82,21 +108,8 @@ nav {
 					}
 				}
 			}
-			// add class to ul in order to display li(s)
-			&.show-list-items {
-				li {
-					height: initial;
-					max-height: rem-calc(47);
-					border-bottom: 1px solid $nav-border-color;
-				  -webkit-transition: max-height 300ms;
-				  	 -moz-transition: max-height 300ms;
-				  		-ms-transition: max-height 300ms;
-				  		 -o-transition: max-height 300ms;
-				  				transition: max-height 300ms;
-					&:first-of-type {
-						border-top: 1px solid $nav-border-color;
-					}
-				}
+			@include breakpoint(medium) {
+				display: initial;
 			}
 		}
 	}
