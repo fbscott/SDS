@@ -1,53 +1,37 @@
 // module-specific vars
-$nav-border-color: #404040;
-$nav-box-shadow-color: #2d2d2d;
+$nav-small-bg-color: #2d2d2d;
+$nav-small-bg-hover-color: #cccccc;
+$nav-small-border-color: #404040;
+$nav-small-a-hover-color: #2d2d2d;
+
+// mixins
+@mixin trans-colors {
+	-webkit-transition: color 300ms, background-color 300ms;
+		 -moz-transition: color 300ms, background-color 300ms;
+			-ms-transition: color 300ms, background-color 300ms;
+			 -o-transition: color 300ms, background-color 300ms;
+					transition: color 300ms, background-color 300ms;
+}
 
 // This ruleset won't be rendered on its own.
 nav {
 	&%home {
+		@include breakpoint(medium) {
+	    position: absolute;
+	    bottom: 5%;
+	    width: 100%;
+		}
 		ul {
 			display: none;
+			margin-bottom: 0;
+			@include breakpoint(medium) {
+				display: block;
+			}
 			li {
-				background-color: #2d2d2d;
-				border-bottom: 1px solid $nav-border-color;
-				-webkit-transition: background-color 300ms;
-					 -moz-transition: background-color 300ms;
-						-ms-transition: background-color 300ms;
-						 -o-transition: background-color 300ms;
-								transition: background-color 300ms;
-				&:hover {
-					background-color: #cccccc;
-					// box-shadow: inset 0 rem-calc(10) rem-calc(5) rem-calc(-10) $nav-box-shadow-color, inset 0 rem-calc(-10) rem-calc(5) rem-calc(-10) $nav-box-shadow-color;
-					-webkit-transition: background-color 300ms;
-						 -moz-transition: background-color 300ms;
-							-ms-transition: background-color 300ms;
-							 -o-transition: background-color 300ms;
-									transition: background-color 300ms;
-					a {
-						color: #2d2d2d;
-						-webkit-transition: color 300ms;
-							 -moz-transition: color 300ms;
-								-ms-transition: color 300ms;
-								 -o-transition: color 300ms;
-										transition: color 300ms;
-					}
-				}
-				&:first-of-type {
-					border-top: 1px solid $nav-border-color;
-				}
-				a {
-					width: 100%;
-					display: block;
-					color: #ffffff;
-					padding: rem-calc(10);
-					-webkit-transition: color 300ms;
-						 -moz-transition: color 300ms;
-							-ms-transition: color 300ms;
-							 -o-transition: color 300ms;
-									transition: color 300ms;
-				}
+				background-color: $nav-small-bg-color;
+				border-bottom: 1px solid $nav-small-border-color;
 				@include breakpoint(medium) {
-					background-color: initial;
+					background-color: transparent;
 					border-bottom: none;
 					// media-specific
 					list-style: none;
@@ -67,24 +51,39 @@ nav {
 		      // four items
 		      &:first-child:nth-last-child(4),
 		      &:first-child:nth-last-child(4) ~ li {
-						width: 50%;
-						@include breakpoint(medium) {
-							width: 25%;
-						}
+						width: 25%;
 		      }
 		      // five items
 		      &:first-child:nth-last-child(5),
 		      &:first-child:nth-last-child(5) ~ li {
-						width: 50%;
-						@include breakpoint(medium) {
-							width: 20%;
-						}
+						width: 20%;
 		      }
+				}
+				&:hover {
+					background-color: $nav-small-bg-hover-color;
+					@include breakpoint(medium) {
+						background-color: transparent;
+					}
 					a {
+						color: $nav-small-a-hover-color;
+					}
+				}
+				&:first-of-type {
+					border-top: 1px solid $nav-small-border-color;
+					@include breakpoint(medium) {
+						border-top: none;
+					}
+				}
+				a {
+					width: 100%;
+					display: block;
+					color: #ffffff;
+					padding: rem-calc(10);
+					@include breakpoint(medium) {
 						font-family: $header-font-family-overrides;
 						width: initial;
 						display: initial;
-						color: initial;
+						color: #2d2d2d;
 						padding: initial;
 						// media-specific
 						position: relative;
@@ -92,29 +91,48 @@ nav {
 						text-decoration: none;
 						width: 0;
 						height: 0;
-						@include breakpoint(750) {
-							padding: rem-calc(70);
-						}
 						padding: rem-calc(50);
 						white-space: nowrap;
-						background-color: white;
+						background-color: rgba(255,255,255,0.80);
 						border-radius: 50%;
 						left: 50%;
 						transform: translateX(-50%);
+						box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25), 0px -2px 2px 0px rgba(0,0,0,0.25);
+						@include trans-colors;
+						&:before {
+							content: " ";
+							position: absolute;
+							z-index: -1;
+							top: rem-calc(5);
+							left: rem-calc(5);
+							right: rem-calc(5);
+							bottom: rem-calc(5);
+							border: rem-calc(2) dashed #8e8e8e;
+							border-radius: 50%;
+						}
+						&:hover {
+							color: #ffffff;
+							background-color: rgba(45,45,45,0.80);
+							@include trans-colors;
+							// &:before {
+							// 	border-color: #ffffff;
+							// }
+						}
 						span {
 							position: absolute;
 							transform: translate(-50%, -50%);
+							font-size: rem-calc(28);
 						}
 					}
+					@include breakpoint(750) {
+						padding: rem-calc(71);
+					}
 				}
-			}
-			@include breakpoint(medium) {
-				display: initial;
 			}
 		}
 	}
 	&%sub {
-	  color: white;
+	  color: #ffffff;
 	  font-size: 1.5em;
 	}
 }
