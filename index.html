@@ -12,25 +12,37 @@
       <div class="row">
         <div class="column">
           <h1 class="text-center js-nav-trigger">Sanders Design Stage</h1>
-          <!-- <a class="js-nav-trigger" href="javascript:void(0);" style=" color: #ffffff; margin-top: -2rem; position: relative; display: block;">x</a> -->
         </div>
       </div>
     </section>
 
     <section class="home-bg-img">
-      <!-- <div class="row"> -->
-        <nav id="nav-home-page">
-          <ul class="row js-nav-toggle">
-            <li class="column"><a href="javascript:void(0);"><span>About</span></a></li>
-            <li class="column"><a href="javascript:void(0);"><span>Services</span></a></li>
-            <li class="column"><a href="javascript:void(0);"><span>Gallery</span></a></li>
-            <li class="column"><a href="javascript:void(0);"><span>FAQs</span></a></li>
-            <li class="column"><a href="javascript:void(0);"><span>Contact</span></a></li>
-          </ul>
-        </nav>
-      <!-- </div> -->
+      <nav id="nav-home-page">
+        <ul class="row js-nav-toggle js-strapline-nav-items">
+          <li class="column"><a href="javascript:void(0);" class="js-strapline" data-strapline="1"><span>About</span></a></li>
+          <li class="column"><a href="javascript:void(0);" class="js-strapline" data-strapline="2"><span>Services</span></a></li>
+          <li class="column"><a href="javascript:void(0);" class="js-strapline" data-strapline="3"><span>Gallery</span></a></li>
+          <li class="column"><a href="javascript:void(0);" class="js-strapline" data-strapline="4"><span>FAQs</span></a></li>
+          <li class="column"><a href="javascript:void(0);" class="js-strapline" data-strapline="5"><span>Contact</span></a></li>
+        </ul>
+      </nav>
     </section>
-    
+
+    <section class="strapline-outer-container">
+      <div class="bg-color-charcoal strapline-border">
+        <div id="strapline" class="row strapline-highlights">
+          <div class="medium-3 large-2 columns header">
+            <h2 class="show js-strapline-highlights-header"></h2>
+          </div>
+          <div class="caret"></div>
+          <div class="medium-9 large-10 columns content">
+            <p class="show js-strapline-highlights-p"></p><!-- Strapline highlights -->
+            <p class="show js-strapline-highlights-a"><a href=""></a></p><!-- Strapline highlights link -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="row">
       <div class="large-12 columns">
         <div class="callout">
@@ -181,5 +193,6 @@
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="js/nav_toggle.js"></script>
+    <script src="js/strapline.js"></script>
   </body>
 </html>

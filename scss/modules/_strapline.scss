@@ -1,0 +1,84 @@
+// mixins
+@mixin strapline-trans-caret {
+	-webkit-transition: left 300ms ease-in-out;
+		 -moz-transition: left 300ms ease-in-out;
+			-ms-transition: left 300ms ease-in-out;
+			 -o-transition: left 300ms ease-in-out;
+					transition: left 300ms ease-in-out;
+}
+@mixin strapline-trans-opacity {
+	-webkit-transition: opacity 300ms ease-in-out;
+		 -moz-transition: opacity 300ms ease-in-out;
+			-ms-transition: opacity 300ms ease-in-out;
+			 -o-transition: opacity 300ms ease-in-out;
+					transition: opacity 300ms ease-in-out;
+}
+@mixin strapline-opacity($opacity) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  filter: alpha(opactiy=($opacity * 100));
+  -khtml-opacity: $opacity;
+  -moz-opacity: $opacity;
+  opacity: $opacity;
+}
+
+#strapline {
+	color: #cdcdcd;
+}
+
+.strapline-highlights {
+  background-color: #2d2d2d;
+  padding: rem-calc(12);
+  position: relative;
+  display: block;
+  h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include strapline-opacity(0);
+    @include strapline-trans-opacity;
+    &.show {
+      @include strapline-opacity(1);
+    }
+  }
+  p {
+    font-size: rem-calc(12);
+    color: $white;
+    display: inline;
+    @include strapline-opacity(0);
+    @include strapline-trans-opacity;
+    &.show {
+      @include strapline-opacity(1);
+    }
+  }
+  a {
+    color: #cdcdcd;
+  }
+  .caret {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 rem-calc(18) rem-calc(18);
+    border-color: #ffffff transparent;
+    margin-left: rem-calc(-18);
+    top: rem-calc(-18);
+    left: 10%; // Starting position. Shift is performed by strapline.js via data-percent attribute.
+    @include strapline-trans-caret;
+		&:before {
+	    content: '';
+	    position: absolute;
+	    border-style: solid;
+	    border-width: 0 rem-calc(16) rem-calc(16);
+	    border-color: #2d2d2d transparent;
+	    margin-left: rem-calc(-16);
+	    top: rem-calc(2);
+		}
+  }
+}
+
+.strapline-outer-container {
+	position: relative;
+	margin-top: rem-calc(-7);
+	padding: rem-calc(7) 0 rem-calc(7) 0;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px rem-calc(5) 0px rgba(0,0,0,0.5);
+}
