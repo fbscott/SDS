@@ -10,9 +10,9 @@
   <body>
     <section id="header" class="bg-color-charcoal">
       <div class="row">
-        <div class="column">
+        <header class="column">
           <h1 class="text-center js-nav-trigger">Sanders Design Stage</h1>
-        </div>
+        </header>
       </div>
     </section>
 
@@ -31,9 +31,9 @@
     <section class="strapline-outer-container">
       <div class="bg-color-charcoal strapline-border">
         <div id="strapline" class="row strapline-highlights">
-          <div class="medium-3 large-2 columns header">
+          <header class="medium-3 large-2 columns header">
             <h2 class="show js-strapline-highlights-header"></h2>
-          </div>
+          </header>
           <div class="caret"></div>
           <div class="medium-9 large-10 columns content">
             <p class="show js-strapline-highlights-p"></p><!-- Strapline highlights -->
@@ -43,7 +43,17 @@
       </div>
     </section>
 
-    <div class="row">
+    <section>
+      <footer class="row">
+        <div class="column">
+          <h3>Sanders Design Stage</h3>
+          <p>Est. 2008</p>
+          <p>Copyright &#169; <span class="copyright"></span> SandersDesignStage.com</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- <div class="row">
       <div class="large-12 columns">
         <div class="callout">
           <h3>We&rsquo;re stoked you want to try Foundation! </h3>
@@ -70,13 +80,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="large-8 medium-8 columns">
         <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
         <div class="row">
           <div class="large-12 columns">
             <div class="primary callout">
@@ -187,12 +195,13 @@
           <a href="http://foundation.zurb.com/sites/docs/" class="xsmall button">Go to Foundation Docs</a>          
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="js/nav_toggle.js"></script>
     <script src="js/strapline.js"></script>
+    <script src="js/footer.js"></script>
   </body>
 </html>

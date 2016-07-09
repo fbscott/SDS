@@ -1,0 +1,13 @@
+footer {
+	text-align: center;
+	padding: rem-calc(32) 0 rem-calc(32) 0;
+	h3 {
+
+	}
+	p {
+		color: #b4b4b4;
+		&:first-of-type {
+			margin-top: rem-calc(-10);
+		}
+	}
+}
