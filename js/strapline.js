@@ -12,7 +12,7 @@
  * - '.js-strapline                     : Clickable strapline element (span.icon & label container) - div
  */
 
-(function($){
+;(function($){
 // set a local $ variable only available in this block as an alias to jQuery
 // helps with alerts (mootools) conflicts
 
@@ -24,31 +24,31 @@
         straplineContents   = [
             {
                 header  : "About",
-                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius purus eros, a laoreet dolor egestas eu. Sed eleifend molestie sem. Sed quis egestas metus, sed dignissim lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat.",
-                link    : "Visit our About page to learn more! \u00BB",
+                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius purus eros, a laoreet dolor egestas eu. Sed eleifend molestie sem. Sed quis egestas metus, sed dignissim lorem.",
+                link    : "Visit our About page to learn more about us! \u00BB",
                 url     : "javascript:void(0);",
                 // small   : "16.666666%",
                 large   : "10%"
             },
             {
                 header  : "Services",
-                content : "In consequat justo eget justo semper, in tincidunt elit molestie. Aenean varius hendrerit tellus id tincidunt. Mauris nunc lorem, efficitur non odio at, ullamcorper consectetur sem. Nulla aliquet faucibus molestie. Aenean ante nibh, lobortis at nibh ac, feugiat dignissim justo.",
-                link    : "Visit our Services page to learn more! \u00BB",
+                content : "We take our furniture and leave it at your house. Then, when we feel it's been there long enough, we come by and pick it back up again - along with some of your money.",
+                link    : "Click here to learn more about our services! \u00BB",
                 url     : "javascript:void(0);",
                 // small   : "50%",
                 large   : "30%"
             },
             {
                 header  : "Gallery",
-                content : "Phasellus bibendum nunc in ex semper consectetur. Nam aliquet tortor egestas malesuada scelerisque. Sed id maximus lectus. Nullam condimentum nulla sem, et finibus felis volutpat eu. Suspendisse nisi neque, ornare a diam a, tincidunt ornare lacus. Duis scelerisque sapien non nisi ultricies molestie.",
-                link    : "Visit our Gallery page to learn more! \u00BB",
+                content : "See what we've done for some of our previous customers.",
+                link    : "Click here to view our Gallery page! \u00BB",
                 url     : "javascript:void(0);",
                 // small   : "83.333333%",
                 large   : "50%"
             },
             {
                 header  : "FAQs",
-                content : "Curabitur rhoncus mollis risus in mattis. Sed ut orci volutpat elit porta rutrum ac et mauris. In pharetra, libero non blandit volutpat, lorem ipsum interdum ipsum, sit amet commodo ante felis nec erat. Fusce dui turpis, elementum vitae ornare nec, accumsan id risus. Fusce semper ante a purus tempor laoreet.",
+                content : "You have questions, we have answers. Fusce dui turpis, elementum vitae ornare nec, accumsan id risus. Fusce semper ante a purus tempor laoreet.",
                 link    : "Visit our FAQs page to learn more! \u00BB",
                 url     : "javascript:void(0);",
                 // small   : "16.666666%",
@@ -56,8 +56,8 @@
             },
             {
                 header  : "Contact",
-                content : "Curabitur rutrum elementum rhoncus. Proin nec suscipit velit, eget hendrerit purus. Morbi id odio egestas, mattis mi eu, viverra felis. Suspendisse et orci non lacus porta finibus id in mauris. Sed sed accumsan nunc. Donec turpis felis, sollicitudin in neque id, faucibus egestas quam.",
-                link    : "Visit our Contact page to learn more! \u00BB",
+                content : "Let us know how we can help! Reach out to us via telephone, email, or web form.",
+                link    : "Find our contact information here! \u00BB",
                 url     : "javascript:void(0);",
                 // small   : "50%",
                 large   : "90%"

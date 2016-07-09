@@ -30,10 +30,16 @@
   padding: rem-calc(12);
   position: relative;
   display: block;
+  min-height: rem-calc(72);
   h2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    top: initial;
+    transform: initial;
+  	@include breakpoint(medium) {
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+  	}
     @include strapline-opacity(0);
     @include strapline-trans-opacity;
     &.show {
@@ -54,6 +60,10 @@
     color: #cdcdcd;
   }
   .caret {
+  	display: none;
+  	@include breakpoint(medium) {
+  		display: initial;
+  	}
     content: '';
     position: absolute;
     border-style: solid;

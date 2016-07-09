@@ -1,13 +1,16 @@
 .home-bg-img {
 	position: relative;
-	background-image: url(../img/2514-Tournament-Drive-Castle-Rock-CO-80108_09.jpg);
+	// background-image: url(../img/2514-Tournament-Drive-Castle-Rock-CO-80108_09.jpg);
 	background-position: center center;
 	background-repeat:  no-repeat;
 	background-attachment: local;
 	background-size:  cover;
-	background-color: #999;
+	background-color: #2d2d2d;
 	min-height: rem-calc(231);
 	@include breakpoint(medium) {
+		min-height: rem-calc(400);
+	}
+	@include breakpoint(large) {
 		min-height: rem-calc(600);
 	}
 }

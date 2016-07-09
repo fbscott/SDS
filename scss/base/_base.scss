@@ -5,15 +5,15 @@
 $header-font-family-overrides: GreatVibes, serif;
 
 // Base CSS
-// html {
-// 	body {
-// 		font-family: $font-family-serif;
-// 		font-weight: $body-font-weight;
-// 		font-size: $rem-base;
-// 		background-color: $background-color-primary;
-// 		overflow-y: scroll;
-// 	}
-// }
+html {
+	body {
+		// font-family: $font-family-serif;
+		// font-weight: $body-font-weight;
+		// font-size: $rem-base;
+		// background-color: $background-color-primary;
+		overflow-y: scroll;
+	}
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $header-font-family-overrides;
