@@ -11,14 +11,19 @@
 // Show desktop nav in window sizes above 639px
 $(document).ready(function() {
     $(window).on("resize", function() {
+
       function viewport() {
-          var e = window, a = 'inner';
+
+          var e = window,
+          		a = 'inner';
+
           if (!('innerWidth' in window )) {
               a = 'client';
               e = document.documentElement || document.body;
           }
-          return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+          return { width : e[ a + 'Width' ], height : e[ a + 'Height' ] };
       }
+
 	    // Get the correct window sizes with these declarations
 	    windowHeight = viewport().height;
 	    windowWidth = viewport().width;
@@ -27,5 +32,6 @@ $(document).ready(function() {
 					console.log('less than 640.');
 					$('.js-nav-toggle').css('display', 'block');
 			}
+
     });
 });
