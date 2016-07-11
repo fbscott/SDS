@@ -7,7 +7,7 @@
 	background-size:  cover;
 	background-color: #2d2d2d;
 	min-height: rem-calc(231);
-	@include breakpoint(medium) {
+	@include breakpoint(800) {
 		min-height: rem-calc(400);
 	}
 	@include breakpoint(large) {

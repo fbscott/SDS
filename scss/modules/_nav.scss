@@ -125,7 +125,7 @@ nav {
 							font-size: rem-calc(28);
 						}
 					}
-					@include breakpoint(750) {
+					@include breakpoint(800) {
 						padding: rem-calc(71);
 					}
 				}

@@ -132,6 +132,7 @@
      * @return {String} class: div.content p.show
      */
     function deliverStraplineData () {
+        
         $('.strapline-highlights .content p.js-strapline-highlights-p').delay(150).queue(function(next) {
             $(this).text(straplineContents[straplineData].content);
             $(this).addClass('show');
@@ -151,17 +152,6 @@
             // Replace text, add "show" class, continue with opacity transition
             next();
         });
-    }
-
-    /**
-     * Set strapline.content and .link values - from main.json
-     * @param  {Object} currentValue current element being processed in the array
-     * @param  {Object} index        index of the current element being processed in the array
-     * @param  {Object} array        array the forEach is being applied to: straplineContents
-     * @return {String}              From main.json
-     */
-    function translateContent(currentValue, index, array) {
-        // Set strapline.content to value from main.json
     }
 
     init();
