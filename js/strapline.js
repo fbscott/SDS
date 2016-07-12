@@ -68,7 +68,7 @@
      * Set event listeners
      * Loop through strapline contents array if cookie == 'es'
      */
-    function init(){
+    function init() {
         // When js is ready
         $(window).load(function() {
             // Array of strapline elements (6 total)
@@ -132,7 +132,7 @@
      * @return {String} class: div.content p.show
      */
     function deliverStraplineData () {
-        
+
         $('.strapline-highlights .content p.js-strapline-highlights-p').delay(150).queue(function(next) {
             $(this).text(straplineContents[straplineData].content);
             $(this).addClass('show');
