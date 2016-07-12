@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'SDS';
-    src: url('../../fonts/SDS/fonts/SDS.eot?hdu0fn');
-    src: url('../../fonts/SDS/fonts/SDS.eot?hdu0fn#iefix') format('embedded-opentype'),
-         url('../../fonts/SDS/fonts/SDS.ttf?hdu0fn') format('truetype'),
-         url('../../fonts/SDS/fonts/SDS.woff?hdu0fn') format('woff'),
-         url('../../fonts/SDS/fonts/SDS.svg?hdu0fn#SDS') format('svg');
+    src:    url('fonts/SDS.eot?hdu0fn');
+    src:    url('fonts/SDS.eot?hdu0fn#iefix') format('embedded-opentype'),
+        url('fonts/SDS.ttf?hdu0fn') format('truetype'),
+        url('fonts/SDS.woff?hdu0fn') format('woff'),
+        url('fonts/SDS.svg?hdu0fn#SDS') format('svg');
     font-weight: normal;
     font-style: normal;
 }
