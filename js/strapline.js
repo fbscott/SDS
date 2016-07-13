@@ -89,8 +89,8 @@
      */
     function updateStrapline() {
 
-        var straplineContainer  = $('.js-strapline-nav-items'),
-            caretPosition = $(this);
+        var straplineContainer = $('.js-strapline-nav-items'),
+            caretPosition      = $(this);
 
         // Update straplineData with index of clicked strapline item (subtract 1 from data-attr for index value)
         straplineData = $(this).data('strapline') - 1;
