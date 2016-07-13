@@ -1,17 +1,22 @@
-var VIEWPORT = {
-		// Full window width including scrollbar
-		dimensions : function viewport() {
+// Create console.log() namespace.
+SDS.createNS('SDS.LOG');
+// Create viewport size namespace.
+SDS.createNS('SDS.IS_WIN_SIZE');
 
-        var e = window,
-        		a = 'inner';
+// Console logger
+SDS.LOG = function(logMessage) {
+    console.log(logMessage);
+};
 
-        if (!('innerWidth' in window )) {
-            a = 'client';
-            e = document.documentElement || document.body;
-        }
+// Determin window size (including scroll bar)
+SDS.IS_WIN_SIZE.isViewport = function viewport() {
 
-        return { width : e[ a + 'Width' ], height : e[ a + 'Height' ] };
-    },
-		windowHeight : this.dimensions.height(),
-		windowWidth : this.dimensions.width()
-}
+    var e = window;
+    var a = 'inner';
+
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a + 'Width' ], height : e[ a + 'Height' ] };
+};
