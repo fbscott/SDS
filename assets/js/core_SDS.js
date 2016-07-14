@@ -7,7 +7,7 @@ SDS.createNS('SDS.FOOTER');
 SDS.RANDOM_BG_IMAGE = function(imageContainer) {
     
     // Set CSS prop on bg image container.
-    var bgImgProp = 'url(./img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
+    var bgImgProp = 'url(./assets/img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
 
     document.getElementById(imageContainer).style.backgroundImage = bgImgProp;
 };
