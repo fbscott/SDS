@@ -16,9 +16,17 @@
 		    // Get the correct window size
 		    SDS.IS_WIN_SIZE.isViewport();
 
-			windowWidth > 639
-				? $('.js-nav-toggle').css('display', 'block')
-					: $('.js-nav-toggle').css('display', 'none');
+				if (windowWidth > 639) {
+					// Show nav in large views
+					$('.js-nav-toggle').css('display', 'block');
+				} else {
+					// Hide nav in small views
+					$('.js-nav-toggle').css('display', 'none');
+				}
+
+				// windowWidth > 639
+				// 	? $('.js-nav-toggle').css('display', 'block')
+				// 		: $('.js-nav-toggle').css('display', 'none');
 
 	    });
 	});

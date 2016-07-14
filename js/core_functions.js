@@ -4,8 +4,11 @@ SDS.createNS('SDS.LOG');
 SDS.createNS('SDS.IS_WIN_SIZE');
 
 // Console logger
-SDS.LOG = function(logMessage) {
+SDS.LOG.log = function(logMessage) {
     console.log(logMessage);
+};
+SDS.LOG.table = function(logMessage) {
+    console.table(logMessage);
 };
 
 // Determin window size (including scroll bar)
