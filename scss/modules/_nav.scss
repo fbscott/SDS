@@ -58,14 +58,27 @@ nav {
 		      &:first-child:nth-last-child(5) ~ li {
 						width: 20%;
 		      }
+		      // six items
+		      &:first-child:nth-last-child(6),
+		      &:first-child:nth-last-child(6) ~ li {
+						width: 16.666667%;
+		      }
 				}
-				&:hover {
+				&:hover,
+				&.sub-page-background-active {
 					background-color: $nav-small-bg-hover-color;
 					@include breakpoint(medium) {
 						background-color: transparent;
+						a {
+							color: #ffffff;
+							background-color: rgba(45,45,45,0.80);
+						}
 					}
 					a {
 						color: $nav-small-a-hover-color;
+						@include breakpoint(medium) {
+							color: #ffffff;
+						}
 					}
 				}
 				&:first-of-type {
@@ -81,11 +94,7 @@ nav {
 					padding: rem-calc(10);
 					@include breakpoint(medium) {
 						font-family: $header-font-family-overrides;
-						width: initial;
-						display: initial;
 						color: #2d2d2d;
-						padding: initial;
-						// media-specific
 						position: relative;
 						display: block;
 						text-decoration: none;
@@ -127,6 +136,13 @@ nav {
 					}
 					@include breakpoint(800) {
 						padding: rem-calc(71);
+					}
+				}
+				&.sub-page-background {
+					@include breakpoint(medium) {
+						a {
+							padding: rem-calc(50);
+						}
 					}
 				}
 			}

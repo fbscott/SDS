@@ -1,4 +1,5 @@
-.home-bg-img {
+.home-bg-img,
+.sub-page-bg-img {
 	position: relative;
 	// background-image: url(../img/2514-Tournament-Drive-Castle-Rock-CO-80108_09.jpg);
 	background-position: center center;
@@ -14,4 +15,7 @@
 	@include breakpoint(large) {
 		min-height: rem-calc(600);
 	}
+}
+.sub-page-bg-img {
+	min-height: rem-calc(120);
 }

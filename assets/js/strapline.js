@@ -26,7 +26,7 @@
                 header  : "About",
                 content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius purus eros, a laoreet dolor egestas eu. Sed eleifend molestie sem. Sed quis egestas metus, sed dignissim lorem.",
                 link    : "Visit our About page to learn more about us! \u00BB",
-                url     : "javascript:void(0);",
+                url     : "/about/about.html",
                 // small   : "16.666666%",
                 large   : "10%"
             },
