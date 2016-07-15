@@ -29,25 +29,3 @@ header#page-header {
 	box-shadow: 0px 0px rem-calc(5) 0px rgba(0,0,0,0.5);
 	z-index: 1;
 }
-
-// #hamburger {
-// 	@include hamburger($color: $white, $color-hover: $dark-gray);
-//   position: absolute;
-//   right: rem-calc(10);
-//   top: rem-calc(13);
-//   &:hover {
-//   	&:before {
-//   		color: #8a8a8a;
-//   	}
-//   }
-//   &:before {
-// 		content: 'Menu';
-// 		position: absolute;
-// 		top: rem-calc(3);
-// 		left: rem-calc(-40);
-// 		font-size: 0.75rem;
-//   }
-//   @include breakpoint(medium) {
-//   	display: none;
-//   }
-// }
