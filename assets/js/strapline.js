@@ -109,7 +109,7 @@
                      .find('.js-strapline')
                     /**
                      * Note: the .strapline-active class part of
-                     * _nav.scss (lines 117 - 121).
+                     * _nav.scss (lines 130 - 134).
                      */
                      .removeClass('strapline-active');
         caretPosition.addClass('strapline-active');

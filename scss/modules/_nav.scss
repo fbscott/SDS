@@ -65,19 +65,22 @@ nav {
 		      }
 				}
 				&:hover,
-				&.sub-page-background-active {
+				&.sub-page-nav-active {
 					background-color: $nav-small-bg-hover-color;
 					@include breakpoint(medium) {
 						background-color: transparent;
+					}
+					a {
+						@include breakpoint(small only) {
+							color: $nav-small-a-hover-color;
+						}
+					}
+				}
+				&.sub-page-nav-active {
+					@include breakpoint(medium) {
 						a {
 							color: #ffffff;
 							background-color: rgba(45,45,45,0.80);
-						}
-					}
-					a {
-						color: $nav-small-a-hover-color;
-						@include breakpoint(medium) {
-							color: #ffffff;
 						}
 					}
 				}
@@ -123,6 +126,7 @@ nav {
 						 * Note: the .strapline-active class is toggled
 						 * in strapline.js (line 114 - 115).
 						 */
+						&:hover,
 						&.strapline-active {
 							color: #ffffff;
 							background-color: rgba(45,45,45,0.80);
@@ -138,7 +142,7 @@ nav {
 						padding: rem-calc(71);
 					}
 				}
-				&.sub-page-background {
+				&.sub-page-nav {
 					@include breakpoint(medium) {
 						a {
 							padding: rem-calc(50);
