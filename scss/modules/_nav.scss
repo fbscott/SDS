@@ -16,145 +16,65 @@ $nav-small-a-hover-color: #2d2d2d;
 // This ruleset won't be rendered on its own.
 nav {
 	&%home {
-		@include breakpoint(medium) {
-	    position: absolute;
-	    bottom: 5%;
-	    width: 100%;
-		}
 		ul {
-			display: none;
-			margin-bottom: 0;
-			@include breakpoint(medium) {
-				display: block;
-			}
 			li {
-				background-color: $nav-small-bg-color;
-				border-bottom: 1px solid $nav-small-border-color;
-				@include breakpoint(medium) {
-					background-color: transparent;
-					border-bottom: none;
-					// media-specific
-					list-style: none;
-					display: inline-block;
-		      // one item
-		      &:first-child:nth-last-child(1),
-		      // two items
-		      &:first-child:nth-last-child(2),
-		      &:first-child:nth-last-child(2) ~ li {
-						width: 50%;
-		      }
-		      // three items
-		      &:first-child:nth-last-child(3),
-		      &:first-child:nth-last-child(3) ~ li {
-						width: 33.333333%;
-		      }
-		      // four items
-		      &:first-child:nth-last-child(4),
-		      &:first-child:nth-last-child(4) ~ li {
-						width: 25%;
-		      }
-		      // five items
-		      &:first-child:nth-last-child(5),
-		      &:first-child:nth-last-child(5) ~ li {
-						width: 20%;
-		      }
-		      // six items
-		      &:first-child:nth-last-child(6),
-		      &:first-child:nth-last-child(6) ~ li {
-						width: 16.666667%;
-		      }
-				}
-				&:hover,
-				&.sub-page-nav-active {
-					background-color: $nav-small-bg-hover-color;
-					@include breakpoint(medium) {
-						background-color: transparent;
-					}
-					a {
-						@include breakpoint(small only) {
-							color: $nav-small-a-hover-color;
-						}
-					}
-				}
-				&.sub-page-nav-active {
-					@include breakpoint(medium) {
-						a {
-							color: #ffffff;
-							background-color: rgba(45,45,45,0.80);
-						}
-					}
-				}
-				&:first-of-type {
-					border-top: 1px solid $nav-small-border-color;
-					@include breakpoint(medium) {
-						border-top: none;
-					}
-				}
+				background-color: transparent;
+				border-bottom: none;
+				list-style: none;
+				display: inline-block;
+	      // one item
+	      &:first-child:nth-last-child(1),
+	      // two items
+	      &:first-child:nth-last-child(2),
+	      &:first-child:nth-last-child(2) ~ li {
+					width: 50%;
+	      }
+	      // three items
+	      &:first-child:nth-last-child(3),
+	      &:first-child:nth-last-child(3) ~ li {
+					width: 33.333333%;
+	      }
+	      // four items
+	      &:first-child:nth-last-child(4),
+	      &:first-child:nth-last-child(4) ~ li {
+					width: 25%;
+	      }
+	      // five items
+	      &:first-child:nth-last-child(5),
+	      &:first-child:nth-last-child(5) ~ li {
+					width: 20%;
+	      }
+	      // six items
+	      &:first-child:nth-last-child(6),
+	      &:first-child:nth-last-child(6) ~ li {
+					width: 16.666667%;
+	      }
 				a {
-					width: 100%;
+					font-family: $header-font-family-overrides;
+					color: #2d2d2d;
+					position: relative;
 					display: block;
-					color: #ffffff;
-					padding: rem-calc(10);
-					@include breakpoint(medium) {
-						font-family: $header-font-family-overrides;
-						color: #2d2d2d;
-						position: relative;
-						display: block;
-						text-decoration: none;
-						width: 0;
-						height: 0;
-						padding: rem-calc(50);
-						white-space: nowrap;
-						background-color: rgba(255,255,255,0.80);
-						border-radius: 50%;
-						left: 50%;
-						transform: translateX(-50%);
-						box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25), 0px -2px 2px 0px rgba(0,0,0,0.25);
-						@include nav-trans-colors;
-						&:before {
-							content: " ";
-							position: absolute;
-							z-index: -1;
-							top: rem-calc(5);
-							left: rem-calc(5);
-							right: rem-calc(5);
-							bottom: rem-calc(5);
-							border: rem-calc(2) dashed #8e8e8e;
-							border-radius: 50%;
-						}
-						/**
-						 * Note: the .strapline-active class is toggled
-						 * in strapline.js (line 114 - 115).
-						 */
-						&:hover,
-						&.strapline-active {
-							color: #ffffff;
-							background-color: rgba(45,45,45,0.80);
-							@include nav-trans-colors;
-						}
-						span {
-							position: absolute;
-							transform: translate(-50%, -50%);
-							font-size: rem-calc(28);
-						}
+					text-decoration: none;
+					width: 0;
+					height: 0;
+					padding: rem-calc(26);
+					white-space: nowrap;
+					background-color: rgba(255,255,255,0.80);
+					border-radius: 50%;
+					left: 50%;
+					transform: translateX(-50%);
+					box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25), 0px -2px 2px 0px rgba(0,0,0,0.25);
+					@include breakpoint(400) {
+						padding: rem-calc(32);
 					}
-					@include breakpoint(800) {
-						padding: rem-calc(71);
-					}
-				}
-				&.sub-page-nav {
-					@include breakpoint(medium) {
-						a {
-							padding: rem-calc(50);
-						}
+					span {
+						position: absolute;
+						transform: translate(-50%, -50%);
+						// font-size: rem-calc(28);
 					}
 				}
 			}
 		}
-	}
-	&%sub {
-	  color: #ffffff;
-	  font-size: 1.5em;
 	}
 }
 
@@ -162,6 +82,6 @@ nav {
   @extend %home;
 }
 
-#nav-sub-page {
-  @extend %sub;
-}
+// #nav-sub-page {
+//   @extend %sub;
+// }
