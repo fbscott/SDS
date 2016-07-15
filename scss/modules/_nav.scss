@@ -16,6 +16,12 @@ $nav-small-a-hover-color: #2d2d2d;
 // This ruleset won't be rendered on its own.
 nav {
 	&%home {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    @include breakpoint(medium) {
+    	bottom: 5%;
+    }
 		ul {
 			li {
 				background-color: transparent;
@@ -49,6 +55,12 @@ nav {
 	      &:first-child:nth-last-child(6) ~ li {
 					width: 16.666667%;
 	      }
+	      &:nth-child(odd) {
+	      	margin-top: rem-calc(40);
+	      	@include breakpoint(400) {
+	      		margin-top: initial;
+	      	}
+	      }
 				a {
 					font-family: $header-font-family-overrides;
 					color: #2d2d2d;
@@ -57,26 +69,54 @@ nav {
 					text-decoration: none;
 					width: 0;
 					height: 0;
-					padding: rem-calc(26);
+					padding: rem-calc(30);
 					white-space: nowrap;
 					background-color: rgba(255,255,255,0.80);
 					border-radius: 50%;
 					left: 50%;
 					transform: translateX(-50%);
 					box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25), 0px -2px 2px 0px rgba(0,0,0,0.25);
+					@include nav-trans-colors;
 					@include breakpoint(400) {
-						padding: rem-calc(32);
-					}
+						padding: rem-calc(36);
+						&:before {
+							content: " ";
+							position: absolute;
+							z-index: -1;
+							top: rem-calc(5);
+							left: rem-calc(5);
+							right: rem-calc(5);
+							bottom: rem-calc(5);
+							border: rem-calc(2) dashed #8e8e8e;
+							border-radius: 50%;
+						} // End a:before
+					} // End a breakpoint(400)
+					@include breakpoint(medium) {
+						padding: rem-calc(60);
+					} // End a breakpoint(medium)
+					@include breakpoint(800) {
+						padding: rem-calc(71);
+					} // End a breakpoint(800)
+					&:hover,
+					&.strapline-active {
+						color: #ffffff;
+						background-color: rgba(45,45,45,0.80);
+						@include nav-trans-colors;
+					} // End a:hover
 					span {
 						position: absolute;
 						transform: translate(-50%, -50%);
-						// font-size: rem-calc(28);
-					}
-				}
-			}
-		}
-	}
-}
+						font-size: rem-calc(20);
+						@include breakpoint(medium) {
+							// padding: rem-calc(60);
+							font-size: rem-calc(28);
+						} // End span breakpoint(medium)
+					} // End span
+				} // End a
+			} // End li
+		} // End ul
+	} // End &%home
+} // End nav
 
 #nav-home-page {
   @extend %home;
