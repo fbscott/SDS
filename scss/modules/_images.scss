@@ -1,0 +1,13 @@
+.img-profile {
+	
+}
+.img-shadow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem-calc(-160);
+  width: rem-calc(400);
+	@include breakpoint(800) {
+  	left: rem-calc(-100);
+	}
+}

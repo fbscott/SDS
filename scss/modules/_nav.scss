@@ -23,6 +23,7 @@ nav {
     	bottom: 5%;
     }
 		ul {
+			overflow: hidden;
 			li {
 				background-color: transparent;
 				border-bottom: none;
@@ -58,7 +59,7 @@ nav {
 	      &:nth-child(odd) {
 	      	margin-top: rem-calc(40);
 	      	@include breakpoint(400) {
-	      		margin-top: initial;
+	      		margin-top: inherit;
 	      	}
 	      }
 				a {
@@ -99,7 +100,7 @@ nav {
 					} // End a breakpoint(800)
 					&:hover,
 					&.strapline-active {
-						color: #ffffff;
+						color: $light-gray;
 						background-color: rgba(45,45,45,0.80);
 						@include nav-trans-colors;
 					} // End a:hover
