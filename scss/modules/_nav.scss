@@ -16,89 +16,70 @@ $nav-small-a-hover-color: #2d2d2d;
 // This ruleset won't be rendered on its own.
 nav {
 	&%home {
-		@include breakpoint(medium) {
-	    position: absolute;
-	    bottom: 5%;
-	    width: 100%;
-		}
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    @include breakpoint(medium) {
+    	bottom: 5%;
+    }
 		ul {
-			display: none;
-			margin-bottom: 0;
-			@include breakpoint(medium) {
-				display: block;
-			}
+			overflow: hidden;
 			li {
-				background-color: $nav-small-bg-color;
-				border-bottom: 1px solid $nav-small-border-color;
-				@include breakpoint(medium) {
-					background-color: transparent;
-					border-bottom: none;
-					// media-specific
-					list-style: none;
-					display: inline-block;
-		      // one item
-		      &:first-child:nth-last-child(1),
-		      // two items
-		      &:first-child:nth-last-child(2),
-		      &:first-child:nth-last-child(2) ~ li {
-						width: 50%;
-		      }
-		      // three items
-		      &:first-child:nth-last-child(3),
-		      &:first-child:nth-last-child(3) ~ li {
-						width: 33.333333%;
-		      }
-		      // four items
-		      &:first-child:nth-last-child(4),
-		      &:first-child:nth-last-child(4) ~ li {
-						width: 25%;
-		      }
-		      // five items
-		      &:first-child:nth-last-child(5),
-		      &:first-child:nth-last-child(5) ~ li {
-						width: 20%;
-		      }
-				}
-				&:hover {
-					background-color: $nav-small-bg-hover-color;
-					@include breakpoint(medium) {
-						background-color: transparent;
-					}
-					a {
-						color: $nav-small-a-hover-color;
-					}
-				}
-				&:first-of-type {
-					border-top: 1px solid $nav-small-border-color;
-					@include breakpoint(medium) {
-						border-top: none;
-					}
-				}
+				background-color: transparent;
+				border-bottom: none;
+				list-style: none;
+				display: inline-block;
+	      // one item
+	      &:first-child:nth-last-child(1),
+	      // two items
+	      &:first-child:nth-last-child(2),
+	      &:first-child:nth-last-child(2) ~ li {
+					width: 50%;
+	      }
+	      // three items
+	      &:first-child:nth-last-child(3),
+	      &:first-child:nth-last-child(3) ~ li {
+					width: 33.333333%;
+	      }
+	      // four items
+	      &:first-child:nth-last-child(4),
+	      &:first-child:nth-last-child(4) ~ li {
+					width: 25%;
+	      }
+	      // five items
+	      &:first-child:nth-last-child(5),
+	      &:first-child:nth-last-child(5) ~ li {
+					width: 20%;
+	      }
+	      // six items
+	      &:first-child:nth-last-child(6),
+	      &:first-child:nth-last-child(6) ~ li {
+					width: 16.666667%;
+	      }
+	      &:nth-child(odd) {
+	      	margin-top: rem-calc(40);
+	      	@include breakpoint(400) {
+	      		margin-top: inherit;
+	      	}
+	      }
 				a {
-					width: 100%;
+					font-family: $header-font-family-overrides;
+					color: #2d2d2d;
+					position: relative;
 					display: block;
-					color: #ffffff;
-					padding: rem-calc(10);
-					@include breakpoint(medium) {
-						font-family: $header-font-family-overrides;
-						width: initial;
-						display: initial;
-						color: #2d2d2d;
-						padding: initial;
-						// media-specific
-						position: relative;
-						display: block;
-						text-decoration: none;
-						width: 0;
-						height: 0;
-						padding: rem-calc(50);
-						white-space: nowrap;
-						background-color: rgba(255,255,255,0.80);
-						border-radius: 50%;
-						left: 50%;
-						transform: translateX(-50%);
-						box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25), 0px -2px 2px 0px rgba(0,0,0,0.25);
-						@include nav-trans-colors;
+					text-decoration: none;
+					width: 0;
+					height: 0;
+					padding: rem-calc(30);
+					white-space: nowrap;
+					background-color: rgba(255,255,255,0.80);
+					border-radius: 50%;
+					left: 50%;
+					transform: translateX(-50%);
+					box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25), 0px -2px 2px 0px rgba(0,0,0,0.25);
+					@include nav-trans-colors;
+					@include breakpoint(400) {
+						padding: rem-calc(36);
 						&:before {
 							content: " ";
 							position: absolute;
@@ -109,39 +90,39 @@ nav {
 							bottom: rem-calc(5);
 							border: rem-calc(2) dashed #8e8e8e;
 							border-radius: 50%;
-						}
-						/**
-						 * Note: the .strapline-active class is toggled
-						 * in strapline.js (line 114 - 115).
-						 */
-						&.strapline-active {
-							color: #ffffff;
-							background-color: rgba(45,45,45,0.80);
-							@include nav-trans-colors;
-						}
-						span {
-							position: absolute;
-							transform: translate(-50%, -50%);
-							font-size: rem-calc(28);
-						}
-					}
+						} // End a:before
+					} // End a breakpoint(400)
+					@include breakpoint(medium) {
+						padding: rem-calc(60);
+					} // End a breakpoint(medium)
 					@include breakpoint(800) {
 						padding: rem-calc(71);
-					}
-				}
-			}
-		}
-	}
-	&%sub {
-	  color: #ffffff;
-	  font-size: 1.5em;
-	}
-}
+					} // End a breakpoint(800)
+					&:hover,
+					&.strapline-active {
+						color: $light-gray;
+						background-color: rgba(45,45,45,0.80);
+						@include nav-trans-colors;
+					} // End a:hover
+					span {
+						position: absolute;
+						transform: translate(-50%, -50%);
+						font-size: rem-calc(20);
+						@include breakpoint(medium) {
+							// padding: rem-calc(60);
+							font-size: rem-calc(28);
+						} // End span breakpoint(medium)
+					} // End span
+				} // End a
+			} // End li
+		} // End ul
+	} // End &%home
+} // End nav
 
 #nav-home-page {
   @extend %home;
 }
 
-#nav-sub-page {
-  @extend %sub;
-}
+// #nav-sub-page {
+//   @extend %sub;
+// }

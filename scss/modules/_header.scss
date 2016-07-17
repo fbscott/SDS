@@ -1,8 +1,22 @@
 // Partial-specific vars
-$header-text-color-casper: map-get($foundation-palette, secondary);
+$header-text-color: $light-gray;
+
+header#page-header {
+	position: relative;
+	h1, h1, h1, h1, h1, h1 {
+		color: $header-text-color;;
+	}
+	button,
+	.button {
+		position: absolute;
+		top: 50%;
+		right: 5%;
+		transform: translateY(-50%);
+	}
+}
 
 #header {
-	color: $header-text-color-casper;
+	color: $header-text-color;
 	h1 {
 		margin-top: rem-calc(8);
 		@include breakpoint(400) {
@@ -17,26 +31,4 @@ $header-text-color-casper: map-get($foundation-palette, secondary);
 	background-color: rgba(255,255,255,0.8);
 	box-shadow: 0px 0px rem-calc(5) 0px rgba(0,0,0,0.5);
 	z-index: 1;
-}
-
-#hamburger {
-	@include hamburger($color: $white, $color-hover: $dark-gray);
-  position: absolute;
-  right: rem-calc(10);
-  top: rem-calc(13);
-  &:hover {
-  	&:before {
-  		color: #8a8a8a;
-  	}
-  }
-  &:before {
-		content: 'Menu';
-		position: absolute;
-		top: rem-calc(3);
-		left: rem-calc(-40);
-		font-size: 0.75rem;
-  }
-  @include breakpoint(medium) {
-  	display: none;
-  }
 }
