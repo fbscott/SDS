@@ -27,6 +27,8 @@
                 content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius purus eros, a laoreet dolor egestas eu. Sed eleifend molestie sem. Sed quis egestas metus, sed dignissim lorem.",
                 link    : "Visit our About page to learn more about us! \u00BB",
                 url     : "/about/about.html",
+                // For test
+                // url     : "https://f3c7e0fd5a5d3d4d9a64f3fb1769fc1590c352d0-www.googledrive.com/host/0B1OzuLRhXA-PWWVNbVhIdFcxNms/about/about.htm",
                 // small   : "16.666666%",
                 large   : "10%"
             },

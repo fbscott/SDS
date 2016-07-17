@@ -37,28 +37,32 @@
   display: block;
   min-height: rem-calc(72);
   h1, h2, h3, h4, h5, h6 {
-    position: relative;
-    color: $light-gray;
-    top: initial;
-    transform: initial;
-  	@include breakpoint(medium) {
-	    position: absolute;
-	    top: 50%;
-	    transform: translateY(-50%);
-  	}
+    color: #bebebe;
+    &.center {
+      position: relative;
+      top: initial;
+      transform: initial;
+    	@include breakpoint(medium) {
+  	    position: absolute;
+  	    top: 50%;
+  	    transform: translateY(-50%);
+    	}
+    }
     @include strapline-opacity(0);
     @include strapline-trans-opacity;
     &.show {
+      // display: block;
       @include strapline-opacity(1);
     }
   }
   p {
     // font-size: rem-calc(12);
-    color: $light-gray;
+    color: #bebebe;
     display: inline;
     @include strapline-opacity(0);
     @include strapline-trans-opacity;
     &.show {
+      // display: block;
       @include strapline-opacity(1);
     }
   }
@@ -68,7 +72,7 @@
     @include strapline-trans-colors;
     &:hover {
       color: #ffc800;
-      text-decoration: underline;
+      // text-decoration: underline;
       @include strapline-trans-colors;
     }
   }
@@ -113,5 +117,6 @@
   }
   p {
     margin-top: rem-calc(-42);
+    white-space: nowrap;
   }
 }

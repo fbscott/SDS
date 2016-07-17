@@ -1,0 +1,41 @@
+// mod-specific vars
+$margin-and-padding-start:			1;
+$margin-and-padding-end:				5;
+$margin-and-padding-multiplier:	8;
+
+// mixins
+@mixin spacing-classes($size, $property) {
+	@for $i from $margin-and-padding-start through $margin-and-padding-end {
+		@each $side in $sides {
+			.#{$property}-#{$side}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
+			  #{$property}-#{$side}: (rem-calc($i * $margin-and-padding-multiplier));
+			}
+			.#{$property}-#{$side}-neg#{$i * -$margin-and-padding-multiplier}-on-#{$size} {
+			  #{$property}-#{$side}: (rem-calc($i * -$margin-and-padding-multiplier));
+			}
+		}
+	}
+}
+@mixin no-spacing-classes($size, $property) {
+	@each $side in $sides {
+		.#{$property}-#{$side}-0-on-#{$size} {
+		  #{$property}-#{$side}: 0;
+		}
+	}
+}
+
+// formulae
+@each $property in $properties {
+	@media #{$small-up} {
+		@include spacing-classes(small, $property);
+		@include no-spacing-classes (small, $property);
+	}
+	@media #{$medium-up} {
+		@include spacing-classes(medium, $property);
+		@include no-spacing-classes (medium, $property);
+	}
+	@media #{$large-up} {
+		@include spacing-classes(large, $property);
+		@include no-spacing-classes (large, $property);
+	}
+}
