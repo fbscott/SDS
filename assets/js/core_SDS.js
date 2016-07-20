@@ -9,7 +9,7 @@ SDS.RANDOM_BG_IMAGE = function(imageContainer) {
     // Set CSS prop on bg image container.
     var bgImgProp = 'url(/assets/img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
     // For test
-    // var bgImgProp = 'url(https://f3c7e0fd5a5d3d4d9a64f3fb1769fc1590c352d0-www.googledrive.com/host/0B1OzuLRhXA-PWWVNbVhIdFcxNms//assets/img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
+    // var bgImgProp = 'url(https://f3c7e0fd5a5d3d4d9a64f3fb1769fc1590c352d0-www.googledrive.com/host/0B1OzuLRhXA-PWWVNbVhIdFcxNms/assets/img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
 
     document.getElementById(imageContainer).style.backgroundImage = bgImgProp;
 };
