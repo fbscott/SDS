@@ -4,6 +4,16 @@
 // $panel-border-color: lighten($primary-color, 50%);
 $header-font-family-overrides: GreatVibes, serif;
 
+// Mixins
+// mixins
+@mixin a-trans-colors {
+  -webkit-transition: color 300ms;
+     -moz-transition: color 300ms;
+      -ms-transition: color 300ms;
+       -o-transition: color 300ms;
+          transition: color 300ms;
+}
+
 // Base CSS
 html {
 	body {
@@ -30,21 +40,21 @@ h1, h2, h3, h4, h5, h6 {
 // 	font-style: italic;
 // 	color: $p-color;
 // }
-// a {
-// 	// text-decoration: none;
-// 	&:link {
-// 	    color: $a-color;
-// 	}
-// 	&:visited {
-// 	    color: $a-color;
-// 	}
-// 	&:hover {
-// 	    color: $a-color;
-// 	}
-// 	&:active {
-// 	    color: $a-color;
-// 	}
-// }
+a {
+  @include a-trans-colors;
+  &:hover {
+    color: #cccccc;
+    // text-decoration: underline;
+    @include a-trans-colors;
+  }
+	&.orange {
+	  color: #ff9900;
+	  font-style: italic;
+	  &:hover {
+	    color: #ffc800;
+	  }
+	}
+}
 // li {
 // 	font-size: $li-font-size;
 // 	line-height: $li-line-height;

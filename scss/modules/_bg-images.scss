@@ -24,12 +24,12 @@
 	@extend %bg-img;
 	min-height: rem-calc(140);
 	@include breakpoint(400) {
-		min-height: rem-calc(112);
+		min-height: rem-calc(122);
 	}
 	@include breakpoint(medium) {
-		min-height: rem-calc(176);
+		min-height: rem-calc(186);
 	}
 	@include breakpoint(800) {
-		min-height: rem-calc(200);
+		min-height: rem-calc(210);
 	}
 }

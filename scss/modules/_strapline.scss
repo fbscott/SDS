@@ -1,13 +1,4 @@
 // mixins
-@mixin strapline-trans-colors {
-  -webkit-transition: color 300ms;
-     -moz-transition: color 300ms;
-      -ms-transition: color 300ms;
-       -o-transition: color 300ms;
-          transition: color 300ms;
-}
-
-// mixins
 @mixin strapline-trans-caret {
 	-webkit-transition: left 300ms ease-in-out;
 		 -moz-transition: left 300ms ease-in-out;
@@ -66,16 +57,16 @@
       @include strapline-opacity(1);
     }
   }
-  a {
-    color: #ff9900;
-    font-style: italic;
-    @include strapline-trans-colors;
-    &:hover {
-      color: #ffc800;
-      // text-decoration: underline;
-      @include strapline-trans-colors;
-    }
-  }
+  // a {
+  //   color: #ff9900;
+  //   font-style: italic;
+  //   @include strapline-trans-colors;
+  //   &:hover {
+  //     color: #ffc800;
+  //     // text-decoration: underline;
+  //     @include strapline-trans-colors;
+  //   }
+  // }
   .caret {
   	display: none;
   	@include breakpoint(medium) {
