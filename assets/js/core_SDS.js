@@ -19,7 +19,7 @@ SDS.RANDOM_BG_IMAGE.imagesHome = [
     // '112-N-Castle-Pines-Drive-Castle-Rock-CO-80108_21.jpg',
     // '278-Dahlia-Street-Denver-CO-80220_08.jpg',
     // '278-Dahlia-Street-Denver-CO-80220_16.jpg',
-    '382-Galena-Street-Aurora-CO-80010_01.jpg',
+    // '382-Galena-Street-Aurora-CO-80010_01.jpg',
     // '382-Galena-Street-Aurora-CO-80010_06.jpg',
     // '382-Galena-Street-Aurora-CO-80010_08.jpg',
     // '382-Galena-Street-Aurora-CO-80010_10.jpg',
@@ -31,11 +31,31 @@ SDS.RANDOM_BG_IMAGE.imagesHome = [
     // '6166-Massive-Peak-Loop-Castle-Rock-CO_13.jpg',
     // '6166-Massive-Peak-Loop-Castle-Rock-CO_22.jpg',
     // '6166-Massive-Peak-Loop-Castle-Rock-CO_25.jpg',
-    '6912-Chestnut-Court-Parker-CO-80134_12.jpg'
+    // '6912-Chestnut-Court-Parker-CO-80134_12.jpg',
     // '6912-Chestnut-Court-Parker-CO-80134_16.jpg',
     // '10995-Bluegate-Way-Highlands-Ranch-CO-80130_15.jpg',
     // '10995-Bluegate-Way-Highlands-Ranch-CO-80130_17.jpg',
     // '18752-E-Powers-Drive-Aurora-CO-80015_01.jpg'
+    'aurora_01.jpg',
+    // 'aurora_02.jpg',
+    // 'aurora_03.jpg',
+    // 'aurora_04.jpg',
+    // 'aurora_05.jpg',
+    // 'aurora_06.jpg',
+    // 'castleRock_01.jpg',
+    // 'castleRock_02.jpg',
+    // 'castleRock_03.jpg',
+    // 'castleRock_04.jpg',
+    // 'castleRock_05.jpg',
+    // 'castleRock_06.jpg',
+    // 'castleRock_07.jpg',
+    // 'castleRock_08.jpg',
+    // 'denver_01.jpg',
+    // 'denver_02.jpg',
+    // 'highlandsRanch_01.jpg',
+    // 'highlandsRanch_02.jpg',
+    'parker_01.jpg'
+    // 'parker_02.jpg'
 ];
 
 // Footer copyright date
