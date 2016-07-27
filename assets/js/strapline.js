@@ -36,7 +36,7 @@
                 header  : "Services",
                 content : "We take our furniture and leave it at your house. Then, when we feel it's been there long enough, we come by and pick it back up again - along with some of your money.",
                 link    : "Click here to learn more about our services! \u00BB",
-                url     : "javascript:void(0);",
+                url     : "/services/services.html",
                 // small   : "50%",
                 large   : "30%"
             },
@@ -44,7 +44,7 @@
                 header  : "Gallery",
                 content : "See what we've done for some of our previous customers.",
                 link    : "Click here to view our Gallery page! \u00BB",
-                url     : "javascript:void(0);",
+                url     : "/gallery/gallery.html",
                 // small   : "83.333333%",
                 large   : "50%"
             },
@@ -52,7 +52,7 @@
                 header  : "FAQs",
                 content : "You have questions, we have answers. Fusce dui turpis, elementum vitae ornare nec, accumsan id risus. Fusce semper ante a purus tempor laoreet.",
                 link    : "Visit our FAQs page to learn more! \u00BB",
-                url     : "javascript:void(0);",
+                url     : "/faqs/faqs.html",
                 // small   : "16.666666%",
                 large   : "70%"
             },
@@ -60,7 +60,7 @@
                 header  : "Contact",
                 content : "Let us know how we can help! Reach out to us via telephone, email, or web form.",
                 link    : "Find our contact information here! \u00BB",
-                url     : "javascript:void(0);",
+                url     : "/contact/contact.html",
                 // small   : "50%",
                 large   : "90%"
             }
