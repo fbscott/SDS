@@ -26,7 +26,7 @@
                 header  : "About",
                 content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius purus eros, a laoreet dolor egestas eu. Sed eleifend molestie sem. Sed quis egestas metus, sed dignissim lorem.",
                 link    : "Visit our About page to learn more about us! \u00BB",
-                url     : "/about/about.html",
+                url     : "/about/about.htm",
                 // For test
                 // url     : "https://f3c7e0fd5a5d3d4d9a64f3fb1769fc1590c352d0-www.googledrive.com/host/0B1OzuLRhXA-PWWVNbVhIdFcxNms/about/about.htm",
                 // small   : "16.666666%",
@@ -36,7 +36,7 @@
                 header  : "Services",
                 content : "We take our furniture and leave it at your house. Then, when we feel it's been there long enough, we come by and pick it back up again - along with some of your money.",
                 link    : "Click here to learn more about our services! \u00BB",
-                url     : "/services/services.html",
+                url     : "/services/services.htm",
                 // small   : "50%",
                 large   : "30%"
             },
@@ -44,7 +44,7 @@
                 header  : "Gallery",
                 content : "See what we've done for some of our previous customers.",
                 link    : "Click here to view our Gallery page! \u00BB",
-                url     : "/gallery/gallery.html",
+                url     : "/gallery/gallery.htm",
                 // small   : "83.333333%",
                 large   : "50%"
             },
@@ -52,7 +52,7 @@
                 header  : "FAQs",
                 content : "You have questions, we have answers. Fusce dui turpis, elementum vitae ornare nec, accumsan id risus. Fusce semper ante a purus tempor laoreet.",
                 link    : "Visit our FAQs page to learn more! \u00BB",
-                url     : "/faqs/faqs.html",
+                url     : "/faqs/faqs.htm",
                 // small   : "16.666666%",
                 large   : "70%"
             },
@@ -60,7 +60,7 @@
                 header  : "Contact",
                 content : "Let us know how we can help! Reach out to us via telephone, email, or web form.",
                 link    : "Find our contact information here! \u00BB",
-                url     : "/contact/contact.html",
+                url     : "/contact/contact.htm",
                 // small   : "50%",
                 large   : "90%"
             }
