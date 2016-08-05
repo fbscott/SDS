@@ -1,0 +1,24 @@
+$font-size-start:								9;
+$font-size-end:									32;
+
+// GreatVibes
+.great-vibes {
+  // font-family: 'bebas-neue-thin', $font-stack-fallbacks;
+  font-family: 'GreatVibes', $header-font-family;
+  font-weight: 100;
+  font-style: normal;   
+}
+// Font size function
+@for $i from $font-size-start through $font-size-end {
+  .font-size-#{$i} {
+    font-size: rem-calc($i) !important;
+  }
+}
+
+@media only screen and (min-width: 800) {
+   @for $i from $font-size-start through $font-size-end {
+     .font-size-#{$i}-on-large {
+       font-size: rem-calc($i);
+     }
+   }
+}

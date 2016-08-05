@@ -1,0 +1,64 @@
+// Base defaults
+
+// mod-specific var colors
+// $panel-border-color: lighten($primary-color, 50%);
+$header-font-family-overrides: GreatVibes, serif;
+
+// Mixins
+// mixins
+@mixin a-trans-colors {
+  -webkit-transition: color 300ms;
+     -moz-transition: color 300ms;
+      -ms-transition: color 300ms;
+       -o-transition: color 300ms;
+          transition: color 300ms;
+}
+
+// Base CSS
+html {
+	body {
+		// font-family: $font-family-serif;
+		// font-weight: $body-font-weight;
+		// font-size: $rem-base;
+		// background-color: $background-color-primary;
+		overflow-y: scroll;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font-family-overrides;
+}
+// a {
+// 	font-size: $a-font-size;
+// 	line-height: $a-line-height;
+// 	text-decoration: none;
+// 	color: $text-color;
+// }
+// p {
+// 	margin-bottom: remCalc(24);
+// 	font-size: $p-font-size;
+// 	font-style: italic;
+// 	color: $p-color;
+// }
+a {
+  @include a-trans-colors;
+  &:hover {
+    color: #cccccc;
+    // text-decoration: underline;
+    @include a-trans-colors;
+  }
+	&.orange {
+	  color: #ff9900;
+	  font-style: italic;
+	  &:hover {
+	    color: #ffc800;
+	  }
+	}
+}
+// li {
+// 	font-size: $li-font-size;
+// 	line-height: $li-line-height;
+// }
+// a, p, li {
+// 	line-height: $default-line-height;
+// }

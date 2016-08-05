@@ -48,20 +48,24 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1000);
 $global-lineheight: 1.5;
+
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  primary    : #2d2d2d,
+  secondary  : #fefefe,
+  success    : #3adb76,
+  warning    : #ffae00,
+  alert      : #ec5840,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
+
+// Color Palette
+$light-gray  : #e6e6e6;
+$medium-gray : #cacaca;
+$dark-gray   : #8a8a8a;
+$black       : #0a0a0a;
+$white       : map-get($foundation-palette, secondary);
+
+$body-background: map-get($foundation-palette, secondary);
+$body-font-color: $dark-gray;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -109,7 +113,7 @@ $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
     'h1': 24,
-    'h2': 20,
+    'h2': 24,
     'h3': 19,
     'h4': 18,
     'h5': 17,
@@ -124,7 +128,9 @@ $header-sizes: (
     'h6': 16,
   ),
 );
-$header-color: inherit;
+// $header-color: inherit;
+$header-color: map-get($foundation-palette, primary);
+$header-alt-color: map-get($foundation-palette, secondary);
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
@@ -237,6 +243,7 @@ $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
+$button-background: rgba($black, 0.5);
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
@@ -417,7 +424,7 @@ $orbit-bullet-margin-top: 0.8rem;
 $orbit-bullet-margin-bottom: 0.8rem;
 $orbit-caption-background: rgba($black, 0.5);
 $orbit-caption-padding: 1rem;
-$orbit-control-background-hover: rgba($black, 0.5);
+$orbit-control-background-hover: rgba($black, 0.85);
 $orbit-control-padding: 1rem;
 $orbit-control-zindex: 10;
 

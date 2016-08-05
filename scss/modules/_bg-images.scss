@@ -1,0 +1,35 @@
+%bg-img {
+	position: relative;
+	// background-image: url(../img/2514-Tournament-Drive-Castle-Rock-CO-80108_09.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: local;
+	background-size: cover;
+	background-color: #2d2d2d;
+	margin-top: rem-calc(-7);
+}
+
+.home-bg-img {
+	@extend %bg-img;
+	min-height: rem-calc(231);
+	@include breakpoint(800) {
+		min-height: rem-calc(400);
+	}
+	@include breakpoint(large) {
+		min-height: rem-calc(600);
+	}
+}
+
+.sub-page-bg-img {
+	@extend %bg-img;
+	min-height: rem-calc(140);
+	@include breakpoint(400) {
+		min-height: rem-calc(122);
+	}
+	@include breakpoint(medium) {
+		min-height: rem-calc(186);
+	}
+	@include breakpoint(800) {
+		min-height: rem-calc(210);
+	}
+}
