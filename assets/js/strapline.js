@@ -24,7 +24,7 @@
         straplineContents   = [
             {
                 header  : "About",
-                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius purus eros, a laoreet dolor egestas eu. Sed eleifend molestie sem. Sed quis egestas metus, sed dignissim lorem.",
+                content : "Jackie aims to please when it comes to design. Serving others with home staging and design is not just her career, it's a passion. \"Its not just a career... it's a life dream.\"",
                 link    : "Visit our About page to learn more about us! \u00BB",
                 url     : "/about/about.htm",
                 // For test
@@ -34,7 +34,7 @@
             },
             {
                 header  : "Services",
-                content : "We take our furniture and leave it at your house. Then, when we feel it's been there long enough, we come by and pick it back up again - along with some of your money.",
+                content : "Please review the options and select one that best suit your needs and comfort level. I look forward to doing business with you!",
                 link    : "Click here to learn more about our services! \u00BB",
                 url     : "/services/services.htm",
                 // small   : "50%",
@@ -50,7 +50,7 @@
             },
             {
                 header  : "FAQs",
-                content : "You have questions, we have answers. Fusce dui turpis, elementum vitae ornare nec, accumsan id risus. Fusce semper ante a purus tempor laoreet.",
+                content : "You have questions, we have answers.",
                 link    : "Visit our FAQs page to learn more! \u00BB",
                 url     : "/faqs/faqs.htm",
                 // small   : "16.666666%",
