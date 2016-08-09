@@ -24,7 +24,7 @@
         straplineContents   = [
             {
                 header  : "About",
-                content : "Jackie aims to please when it comes to design. Serving others with home staging and design is \"not just an occupation\u2026 but a life time dream!\"",
+                content : "Jackie aims to please when it comes to design. Serving others with home staging and design is \"not just an occupation\u2026 but a lifetime dream!\"",
                 link    : "Visit our About page to learn more about us! \u00BB",
                 url     : "/about/about.htm",
                 // small   : "16.666666%",
@@ -40,7 +40,7 @@
             },
             {
                 header  : "Gallery",
-                content : "See what we've done for some of our previous customers.",
+                content : "Browse through our gallery and see what we've done for some of our clients.",
                 link    : "Click here to view our Gallery page! \u00BB",
                 url     : "/gallery/gallery.htm",
                 // small   : "83.333333%",
@@ -48,7 +48,7 @@
             },
             {
                 header  : "FAQs",
-                content : "You have questions? We have answers! Please contact us for additional questions and specifics on pricing.",
+                content : "Have a question? Browse through our FAQs page. Can't find what you're looking for, contact Jackie for more information.",
                 link    : "Visit our FAQs page to learn more! \u00BB",
                 url     : "/faqs/faqs.htm",
                 // small   : "16.666666%",
