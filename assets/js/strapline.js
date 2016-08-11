@@ -95,10 +95,10 @@
         }, delay);
     }
 
-    function startCount(i) {
+    function startCount(arr) {
         if (!straplineTimer_is_on) {
             straplineTimer_is_on = 1;
-            highlightStrapline(i, straplineData, 5000);
+            highlightStrapline(arr, straplineData, 5000);
         }
     }
 
@@ -111,15 +111,15 @@
      * Update strapline highlights as icons are hovered
      * Shift caret position
      * Add/remove "show" class for highlights DOM element: p
-     * @var     {Object} straplineContainer     Strapline container
-     * @var     {Object} caretPosition          Current or hovered strapline element
+     * @var     {Object} _straplineContainer     Strapline container
+     * @var     {Object} _caretPosition          Current or hovered strapline element
      */
     function updateStrapline() {
 
         stopCount();
 
-        var straplineContainer = $('.js-strapline-nav-items'),
-            caretPosition      = $(this);
+        var _straplineContainer = $('.js-strapline-nav-items'),
+            _caretPosition      = $(this);
 
         // Update straplineData with index of hovered strapline item (subtract 1 from data-attr for index value)
         straplineData = $(this).data('strapline') - 1;
@@ -134,14 +134,14 @@
         });
 
         // De-emphasize current strapline item - add/remove "strapline-active" class to lighten grey text and icon color
-        caretPosition.closest(straplineContainer)
+        _caretPosition.closest(_straplineContainer)
                      .find('.js-strapline')
                     /**
                      * Note: the .strapline-active class part of
-                     * _nav.scss (lines 130 - 134).
+                     * _nav.scss (lines 103 - 107).
                      */
                      .removeClass('strapline-active');
-        caretPosition.addClass('strapline-active');
+        _caretPosition.addClass('strapline-active');
 
         // Change .strapline-highlights HTML based on caret position.
         straplineContent.html(function() {
