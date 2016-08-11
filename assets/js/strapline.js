@@ -98,7 +98,7 @@
     function startCount(arr) {
         if (!straplineTimer_is_on) {
             straplineTimer_is_on = 1;
-            highlightStrapline(arr, straplineData, 5000);
+            highlightStrapline(arr, straplineData, 8000);
         }
     }
 
