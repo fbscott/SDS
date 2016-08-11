@@ -9,7 +9,7 @@
  * DOM DEPENDENCIES:
  * - '.strapline-secondary'             : Secondary strapline container - outer div
  * - '.strapline-highlights .content'   : Strapline highlight container - p
- * - '.js-strapline                     : Clickable strapline element (span.icon & label container) - div
+ * - '.js-strapline                     : Hoverable strapline element (span.icon & label container) - div
  */
 
 ;(function($){
@@ -17,11 +17,15 @@
 // helps with alerts (mootools) conflicts
 
         // Strapline highlights container (where straplineContents contents will be displayed on the DOM)
-    var straplineContent    = $('.strapline-highlights'),
+    var straplineContent     = $('.strapline-highlights'),
         // Data attribute from strapline-secondary.htm (starts at 0)
-        straplineData       = 0,
+        straplineData        = 0,
+        // Strapline timer function
+        straplineTimer       = '',
+        // Strapline timer toggle
+        straplineTimer_is_on = 0,
         // Array of what will populate .strapline-highlights in the DOM
-        straplineContents   = [
+        straplineContents    = [
             {
                 header  : "About",
                 content : "Jackie aims to please when it comes to design. Serving others with home staging and design is \"not just an occupation\u2026 but a lifetime dream!\"",
@@ -66,36 +70,61 @@
 
     /**
      * Set event listeners
-     * Loop through strapline contents array if cookie == 'es'
+     * Loop through strapline contents
      */
     function init() {
         // When js is ready
         $(window).load(function() {
-            // Array of strapline elements (6 total)
-            var straplineArr = $('.js-strapline');
-            // Update strapline contents on click
+            // Array of strapline elements
+            var _straplineArr = $('.js-strapline');
+            // Update strapline contents on hover
             $(document).on('mouseenter', '.js-strapline', updateStrapline);
-            // Click first .js-strapline on window load
-            $(straplineArr[0]).mouseenter();
+            $(document).on('mouseleave', '.js-strapline', function() {
+                startCount(_straplineArr);
+            });
+            // Auto-cycle through strapline elems
+            startCount(_straplineArr);
+
         });
     }
 
+    function highlightStrapline(elems, i, delay) {
+        elems.eq(i).mouseenter();
+        straplineTimer = setTimeout(function() {
+            highlightStrapline(elems, ++i % elems.length, delay);
+        }, delay);
+    }
+
+    function startCount(arr) {
+        if (!straplineTimer_is_on) {
+            straplineTimer_is_on = 1;
+            highlightStrapline(arr, straplineData, 5000);
+        }
+    }
+
+    function stopCount() {
+        clearTimeout(straplineTimer);
+        straplineTimer_is_on = 0;
+    }
+
     /**
-     * Update strapline highlights as icons are clicked
+     * Update strapline highlights as icons are hovered
      * Shift caret position
      * Add/remove "show" class for highlights DOM element: p
-     * @var     {Object} straplineContainer     Strapline container
-     * @var     {Object} caretPosition          Current or clicked strapline element
+     * @var     {Object} _straplineContainer     Strapline container
+     * @var     {Object} _caretPosition          Current or hovered strapline element
      */
     function updateStrapline() {
 
-        var straplineContainer = $('.js-strapline-nav-items'),
-            caretPosition      = $(this);
+        stopCount();
 
-        // Update straplineData with index of clicked strapline item (subtract 1 from data-attr for index value)
+        var _straplineContainer = $('.js-strapline-nav-items'),
+            _caretPosition      = $(this);
+
+        // Update straplineData with index of hovered strapline item (subtract 1 from data-attr for index value)
         straplineData = $(this).data('strapline') - 1;
 
-        // Shift caret position based on clicked .js-strapline data-percent attribute.
+        // Shift caret position based on hovered .js-strapline data-percent attribute.
         $('.caret').css('left', function() {
             if ($(window).width() < 623) {
                 return straplineContents[straplineData].small;
@@ -105,14 +134,14 @@
         });
 
         // De-emphasize current strapline item - add/remove "strapline-active" class to lighten grey text and icon color
-        caretPosition.closest(straplineContainer)
+        _caretPosition.closest(_straplineContainer)
                      .find('.js-strapline')
                     /**
                      * Note: the .strapline-active class part of
-                     * _nav.scss (lines 130 - 134).
+                     * _nav.scss (lines 103 - 107).
                      */
                      .removeClass('strapline-active');
-        caretPosition.addClass('strapline-active');
+        _caretPosition.addClass('strapline-active');
 
         // Change .strapline-highlights HTML based on caret position.
         straplineContent.html(function() {
