@@ -29,11 +29,11 @@ SDS.RANDOM_BG_IMAGE.imagesHome = [
     // 'castleRock_07.jpg',
     // 'castleRock_08.jpg',
     // 'castleRock_09.jpg',
-    'castleRock_09_b.jpg'
+    // 'castleRock_09_b.jpg',
     // 'denver_01.jpg',
     // 'denver_02.jpg',
     // 'highlandsRanch_01.jpg',
-    // 'highlandsRanch_02.jpg',
+    'highlandsRanch_04.jpg'
     // 'parker_01.jpg',
     // 'parker_02.jpg'
 ];
