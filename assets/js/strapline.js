@@ -28,7 +28,7 @@
         straplineContents    = [
             {
                 header  : "About",
-                content : "Jackie aims to please when it comes to design. Serving others with home staging and design is \"not just an occupation\u2026 but a lifetime dream!\"",
+                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit lectus, tincidunt non tempor a, tristique a purus. Nullam nec ex non orci tincidunt rutrum.",
                 link    : "Visit our About page to learn more about us! \u00BB",
                 url     : "/about/about.htm",
                 // small   : "16.666666%",
@@ -36,7 +36,7 @@
             },
             {
                 header  : "Services",
-                content : "Please review the options and select one that best suits your needs and comfort level. We look forward to doing business with you!",
+                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit lectus, tincidunt non tempor a, tristique a purus. Nullam nec ex non orci tincidunt rutrum.",
                 link    : "Click here to learn more about our services! \u00BB",
                 url     : "/services/services.htm",
                 // small   : "50%",
@@ -44,7 +44,7 @@
             },
             {
                 header  : "Gallery",
-                content : "Browse through our gallery and see what we've done for some of our clients.",
+                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit lectus, tincidunt non tempor a, tristique a purus. Nullam nec ex non orci tincidunt rutrum.",
                 link    : "Click here to view our Gallery page! \u00BB",
                 url     : "/gallery/gallery.htm",
                 // small   : "83.333333%",
@@ -52,7 +52,7 @@
             },
             {
                 header  : "FAQs",
-                content : "Have a question? Browse through our FAQs page. Can't find what you're looking for, contact Jackie for more information.",
+                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit lectus, tincidunt non tempor a, tristique a purus. Nullam nec ex non orci tincidunt rutrum.",
                 link    : "Visit our FAQs page to learn more! \u00BB",
                 url     : "/faqs/faqs.htm",
                 // small   : "16.666666%",
@@ -60,7 +60,7 @@
             },
             {
                 header  : "Contact",
-                content : "Let us know how we can help! Reach out to us via telephone, email, or web form.",
+                content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit lectus, tincidunt non tempor a, tristique a purus. Nullam nec ex non orci tincidunt rutrum.",
                 link    : "Find our contact information here! \u00BB",
                 url     : "/contact/contact.htm",
                 // small   : "50%",

@@ -7,7 +7,8 @@ SDS.createNS('SDS.FOOTER');
 SDS.RANDOM_BG_IMAGE = function(imageContainer) {
     
     // Set CSS prop on bg image container.
-    var bgImgProp = 'url(/assets/img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
+    // var bgImgProp = 'url(/assets/img/' + SDS.RANDOM_BG_IMAGE.imagesHome[Math.floor(Math.random() * SDS.RANDOM_BG_IMAGE.imagesHome.length)] + ')';
+    var bgImgProp = 'url(https://images.unsplash.com/photo-1458134580443-fbb0743304eb?auto=format&fit=crop&w=1825&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)';
 
     document.getElementById(imageContainer).style.backgroundImage = bgImgProp;
 };
